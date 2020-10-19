@@ -85,10 +85,15 @@ if __name__ == '__main__':
     # Important for debug:
     # Note to advanced users: calling Word2Vec(sentences, iter=1) will run two passes over the sentences iterator (or, in general iter+1 passes; default iter=5).
     # from https://rare-technologies.com/word2vec-tutorial/#app
-    #sentences = MyCorpus('./blog/train')
-    #model = gensim.models.Word2Vec(sentences=sentences, workers=12)
-    #model.save("word2vec.model")
-    model = gensim.models.Word2Vec.load("word2vec.model")
+
+    #Loads Model From Scratch
+    sentences = MyCorpus('./blog/train')
+    model = gensim.models.Word2Vec(sentences=sentences, workers=12)
+    model.save("word2vec.model")
+
+    #Loads saved model
+    #model = gensim.models.Word2Vec.load("word2vec.model")
+
     get_similarity("voisins.txt", model)
 
     for i, word in enumerate(model.wv.vocab):
