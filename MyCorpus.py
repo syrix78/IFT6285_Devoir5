@@ -1,5 +1,6 @@
 import os
 
+import gensim
 
 """
 The CSV file is always the same. A line is always : id,  sex, age, sign, commment
@@ -24,10 +25,23 @@ class MyCorpus(object):
     def __init__(self, dirname):
         self.dirname = dirname
 
-    def __iter__(self):
-        for fname in os.listdir(self.dirname):
-            for line in open(os.path.join(self.dirname, fname)):
-                line = getComment(line)
-                #print(line)
-                yield line.split()
 
+    def __iter__(self):
+        counter = 0
+        for fname in os.listdir(self.dirname):
+            if '.csv' in fname:
+                #print(fname)
+                for line in open(os.path.join(self.dirname, fname)):
+                    counter += 1
+                    #print(counter)
+                    line = getComment(line)
+                    #print(line)
+                    yield gensim.utils.simple_preprocess(line)
+
+    def getTotalLinesNumber(self):
+        counter = 0
+        for fname in os.listdir(self.dirname):
+            if '.csv' in fname:
+                for line in open(os.path.join(self.dirname, fname)):
+                    counter += 1
+        return counter

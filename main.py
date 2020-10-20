@@ -1,4 +1,5 @@
 import csv
+import multiprocessing
 import os
 import time
 
@@ -6,9 +7,9 @@ from gensim.test.utils import datapath
 from gensim import utils
 import gensim.models
 from MyCorpus import MyCorpus
+from MyPartialCorpus import MyPartialCorpus
 import cython
-
-
+import matplotlib.pyplot as plt
 
 """
 The CSV file is always the same. A line is always : id,  sex, age, sign, commment
@@ -33,7 +34,7 @@ def readCsv (file):
         sentences.append(sentence)
 
     return sentences
-    
+
 
 
 # from https://mkyong.com/python/python-how-to-list-all-files-in-a-directory/
@@ -59,6 +60,8 @@ for files in csv_list:
 Question 3: Gets the words from the voisins.txt file and finds the 10 closest 
 words using the Word2Vec Model
 """
+
+
 def get_similarity(filepath, word2vec_model):
     tsv_file = open(filepath)
     read_tsv = csv.reader(tsv_file, delimiter="\t")
@@ -68,9 +71,9 @@ def get_similarity(filepath, word2vec_model):
         for row in read_tsv:
             word = row[0]
 
-            #Used to handle out of vocabulary errors
+            # Used to handle out of vocabulary errors
             try:
-                #Maybe we need to sort this list???
+                # Maybe we need to sort this list???
                 most_similar = word2vec_model.similar_by_word(word, topn=10, restrict_vocab=None)
             except:
                 most_similar = []
@@ -81,22 +84,81 @@ def get_similarity(filepath, word2vec_model):
     return
 
 
+def drawTimeCurve(lines, time):
+    print("Creation de la courbe")
+    plt.plot(lines, time, label="Temps en secondes")
+    plt.legend(loc="upper left")
+    plt.xlabel("Nombre de lignes traitées")
+    plt.ylabel("Temps passé en secondes")
+    plt.title("Graphique représentant les lignes traitées en fonction du temps")
+    plt.savefig("time.png")
+    plt.show()
+
+def trainModelPerStep(path, nbrLines=30000):
+
+    totalLines = MyCorpus(path).getTotalLinesNumber() # 643256 normalement
+    print("Nombre total de lignes a traiter: " + str(totalLines))
+    treated_lines = [0]
+    time_array = [0]
+
+    for i in range(totalLines):
+        if i % nbrLines == 0 and i != 0:
+            depart_time = time.time()
+            print("Ligne " + str(i) + " sur " + str(totalLines))
+            partialCorpus = MyPartialCorpus(path, i)
+            model = gensim.models.Word2Vec(sentences=partialCorpus, workers=multiprocessing.cpu_count() * 2)
+            treated_lines.append(i)
+            print("Temps pour entrainer le model: " + str(time.time() - depart_time))
+            time_array.append(time.time() - depart_time)
+
+    print("Ligne " + str(totalLines) + " sur " + str(totalLines))
+    # Pour finir jusqu'aux dernieres lignes
+    depart_time = time.time()
+    corpus = MyCorpus(path)
+    model = gensim.models.Word2Vec(sentences=corpus, workers=multiprocessing.cpu_count() * 2)
+    treated_lines.append(totalLines)
+    print("Temps pour entrainer le model: " + str(time.time() - depart_time))
+    time_array.append(time.time() - depart_time)
+
+    drawTimeCurve(treated_lines, time_array)
+
+
 if __name__ == '__main__':
     # Important for debug:
     # Note to advanced users: calling Word2Vec(sentences, iter=1) will run two passes over the sentences iterator (or, in general iter+1 passes; default iter=5).
     # from https://rare-technologies.com/word2vec-tutorial/#app
+    # Using this information to count how many sentences have been processed
 
-    #Loads Model From Scratch
-    sentences = MyCorpus('./blog/train')
-    model = gensim.models.Word2Vec(sentences=sentences, workers=12)
-    model.save("word2vec.model")
+    # Loads Model From Scratch
+    path = './blog/train'
 
-    #Loads saved model
-    #model = gensim.models.Word2Vec.load("word2vec.model")
+    trainModelPerStep(path)
 
-    get_similarity("voisins.txt", model)
+    """
+    corpus = MyCorpus('/Users/quentinwolak/Desktop/Cours/UdeM/quatrieme_annee/IFT6285/devoir_5/blog.nosync/train')
+    partialCorpus = MyPartialCorpus('/Users/quentinwolak/Desktop/Cours/UdeM/quatrieme_annee/IFT6285/devoir_5/blog.nosync/train', 200)
 
+    print(corpus)
+    print(partialCorpus)
+    counter = 0
+    for elem in partialCorpus:
+        counter += 1
+    print(counter)
+    #model = trainModelForCurves(corpus)
+    #print(model)
+    model2 = gensim.models.Word2Vec(sentences=partialCorpus, workers=multiprocessing.cpu_count() * 2)
+    print(model2)
+    #model.save("word2vec.model")
+
+    # Loads saved model
+    # model = gensim.models.Word2Vec.load("word2vec.model")
+
+    #get_similarity("voisins.txt", model)
+    """
+
+    """
     for i, word in enumerate(model.wv.vocab):
         if i == 10:
             break
         print(word)
+    """
