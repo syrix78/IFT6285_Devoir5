@@ -1,0 +1,12 @@
+Ligne 200000 sur 200001
+Loss after epoch 0: 138.96504
+Loss after epoch 1: 81.39456
+Loss after epoch 2: 69.67592
+Loss after epoch 3: 45.9052
+Temps pour entrainer le model: 408.4964020252228
+Ligne 200000 sur 200001
+Loss after epoch 0: 27.264475
+Loss after epoch 1: 22.068995
+Loss after epoch 2: 20.1062
+Loss after epoch 3: 18.75602
+Temps pour entrainer le model: 388.5379855632782

@@ -1,0 +1,65 @@
+Ligne 200000 sur 200001
+Temps pour entrainer le model: 71.75709414482117
+Ligne 200000 sur 200001
+Loss after epoch 0: 29.928695
+Temps pour entrainer le model: 151.63697242736816
+Ligne 200000 sur 200001
+Loss after epoch 0: 28.1467
+Loss after epoch 1: 24.947655
+Temps pour entrainer le model: 232.1894793510437
+Ligne 200000 sur 200001
+Loss after epoch 0: 34.0876275
+Loss after epoch 1: 24.6357275
+Loss after epoch 2: 19.552175
+Temps pour entrainer le model: 319.8000545501709
+Ligne 200000 sur 200001
+Loss after epoch 0: 40.823485
+Loss after epoch 1: 29.80503
+Loss after epoch 2: 23.935375
+Loss after epoch 3: 17.099
+Temps pour entrainer le model: 411.9272725582123
+Ligne 200000 sur 200001
+Loss after epoch 0: 29.0070925
+Loss after epoch 1: 28.6318075
+Loss after epoch 2: 30.22308
+Loss after epoch 3: 17.09349
+Loss after epoch 4: 28.98699
+Temps pour entrainer le model: 499.16719126701355
+Ligne 200000 sur 200001
+Loss after epoch 0: 28.37645
+Loss after epoch 1: 44.907975
+Loss after epoch 2: 24.655665
+Loss after epoch 3: 22.62109
+Loss after epoch 4: 29.47499
+Loss after epoch 5: 16.55124
+Temps pour entrainer le model: 584.8132338523865
+Ligne 200000 sur 200001
+Loss after epoch 0: 56.11339
+Loss after epoch 1: 21.204605
+Loss after epoch 2: 38.210425
+Loss after epoch 3: 34.00571
+Loss after epoch 4: 17.74436
+Loss after epoch 5: 22.99859
+Loss after epoch 6: 11.73714
+Temps pour entrainer le model: 672.1016747951508
+Ligne 200000 sur 200001
+Loss after epoch 0: 61.242515
+Loss after epoch 1: 25.766565
+Loss after epoch 2: 22.38431
+Loss after epoch 3: 39.42809
+Loss after epoch 4: 18.60341
+Loss after epoch 5: 20.70927
+Loss after epoch 6: 23.2276
+Loss after epoch 7: 13.7709
+Temps pour entrainer le model: 760.1566734313965
+Ligne 200000 sur 200001
+Loss after epoch 0: 65.162985
+Loss after epoch 1: 61.343605
+Loss after epoch 2: 54.24177
+Loss after epoch 3: 16.94386
+Loss after epoch 4: 27.27818
+Loss after epoch 5: 24.43982
+Loss after epoch 6: 18.81656
+Loss after epoch 7: 23.63496
+Loss after epoch 8: 17.30746
+Temps pour entrainer le model: 863.0879521369934

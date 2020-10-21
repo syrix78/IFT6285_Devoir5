@@ -1,0 +1,148 @@
+Ligne 200000 sur 200001
+Loss after epoch 0: 0.0
+Loss after epoch 1: 0.0
+Loss after epoch 2: 0.0
+Loss after epoch 3: 0.0
+Loss after epoch 4: 0.0
+Temps pour entrainer le model: 420.299152135849
+Ligne 200000 sur 200001
+Loss after epoch 0: 14.47723125
+Loss after epoch 1: 13.12801125
+Loss after epoch 2: 12.1103525
+Loss after epoch 3: 11.00848
+Loss after epoch 4: 10.79374
+Temps pour entrainer le model: 413.16821789741516
+Ligne 200000 sur 200001
+Loss after epoch 0: 19.9410225
+Loss after epoch 1: 18.903015
+Loss after epoch 2: 14.9438275
+Loss after epoch 3: 16.16857
+Loss after epoch 4: 16.924085
+Temps pour entrainer le model: 425.0356559753418
+Ligne 200000 sur 200001
+Loss after epoch 0: 30.4478
+Loss after epoch 1: 18.785165
+Loss after epoch 2: 21.356615
+Loss after epoch 3: 19.84796
+Loss after epoch 4: 15.79088
+Temps pour entrainer le model: 442.90347027778625
+Ligne 200000 sur 200001
+Loss after epoch 0: 27.2145
+Loss after epoch 1: 21.398905
+Loss after epoch 2: 19.08042
+Loss after epoch 3: 25.724255
+Loss after epoch 4: 20.11561
+Temps pour entrainer le model: 450.54858469963074
+Ligne 200000 sur 200001
+Loss after epoch 0: 37.091355
+Loss after epoch 1: 23.981565
+Loss after epoch 2: 19.929945
+Loss after epoch 3: 19.545205
+Loss after epoch 4: 19.86411
+Temps pour entrainer le model: 451.45530915260315
+Ligne 200000 sur 200001
+Loss after epoch 0: 45.704825
+Loss after epoch 1: 25.84665
+Loss after epoch 2: 20.708565
+Loss after epoch 3: 18.09207
+Loss after epoch 4: 28.16126
+Temps pour entrainer le model: 452.31955337524414
+Ligne 200000 sur 200001
+Loss after epoch 0: 38.9208725
+Loss after epoch 1: 38.1464675
+Loss after epoch 2: 21.1849
+Loss after epoch 3: 22.62115
+Loss after epoch 4: 25.25756
+Temps pour entrainer le model: 456.31054520606995
+Ligne 200000 sur 200001
+Loss after epoch 0: 33.398645
+Loss after epoch 1: 35.745635
+Loss after epoch 2: 23.7026
+Loss after epoch 3: 23.84612
+Loss after epoch 4: 24.33842
+Temps pour entrainer le model: 455.11970043182373
+Ligne 200000 sur 200001
+Loss after epoch 0: 55.40471
+Loss after epoch 1: 37.86987
+Loss after epoch 2: 28.26612
+Loss after epoch 3: 28.48277
+Loss after epoch 4: 33.89619
+Temps pour entrainer le model: 458.00992345809937
+Ligne 200000 sur 200001
+Loss after epoch 0: 68.91073
+Loss after epoch 1: 56.39238
+Loss after epoch 2: 35.12732
+Loss after epoch 3: 19.76113
+Loss after epoch 4: 24.26854
+Temps pour entrainer le model: 470.6250069141388
+Ligne 200000 sur 200001
+Loss after epoch 0: 53.305655
+Loss after epoch 1: 45.925865
+Loss after epoch 2: 27.93841
+Loss after epoch 3: 23.42976
+Loss after epoch 4: 21.38459
+Temps pour entrainer le model: 451.9059920310974
+Ligne 200000 sur 200001
+Loss after epoch 0: 35.30735
+Loss after epoch 1: 27.538405
+Loss after epoch 2: 26.929095
+Loss after epoch 3: 25.01794
+Loss after epoch 4: 24.0346
+Temps pour entrainer le model: 437.89276933670044
+Ligne 200000 sur 200001
+Loss after epoch 0: 35.1507875
+Loss after epoch 1: 28.4835025
+Loss after epoch 2: 26.40496
+Loss after epoch 3: 25.09613
+Loss after epoch 4: 25.2887
+Temps pour entrainer le model: 438.7856709957123
+Ligne 200000 sur 200001
+Loss after epoch 0: 35.699885
+Loss after epoch 1: 28.536935
+Loss after epoch 2: 27.18324
+Loss after epoch 3: 26.15016
+Loss after epoch 4: 25.36313
+Temps pour entrainer le model: 440.38005208969116
+Ligne 200000 sur 200001
+Loss after epoch 0: 36.2285825
+Loss after epoch 1: 29.1345425
+Loss after epoch 2: 27.186255
+Loss after epoch 3: 26.09867
+Loss after epoch 4: 25.58581
+Temps pour entrainer le model: 441.3394846916199
+Ligne 200000 sur 200001
+Loss after epoch 0: 37.09077
+Loss after epoch 1: 30.02799
+Loss after epoch 2: 27.45343
+Loss after epoch 3: 27.2419
+Loss after epoch 4: 27.82228
+Temps pour entrainer le model: 442.51063442230225
+Ligne 200000 sur 200001
+Loss after epoch 0: 35.6953675
+Loss after epoch 1: 30.0487825
+Loss after epoch 2: 28.09857
+Loss after epoch 3: 26.44432
+Loss after epoch 4: 26.60594
+Temps pour entrainer le model: 444.2595331668854
+Ligne 200000 sur 200001
+Loss after epoch 0: 36.827795
+Loss after epoch 1: 30.77803
+Loss after epoch 2: 29.585425
+Loss after epoch 3: 27.50601
+Loss after epoch 4: 27.34114
+Temps pour entrainer le model: 445.62360072135925
+Ligne 200000 sur 200001
+Loss after epoch 0: 37.4596375
+Loss after epoch 1: 30.9485475
+Loss after epoch 2: 29.156915
+Loss after epoch 3: 27.67465
+Loss after epoch 4: 27.99737
+Temps pour entrainer le model: 433.5699026584625
+Ligne 200000 sur 200001
+Loss after epoch 0: 37.90655
+Loss after epoch 1: 30.942775
+Loss after epoch 2: 29.981955
+Loss after epoch 3: 28.59917
+Loss after epoch 4: 27.78062
+Temps pour entrainer le model: 422.1233925819397
+
