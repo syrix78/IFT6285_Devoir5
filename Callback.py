@@ -1,3 +1,7 @@
+"""
+Lucas Hornung --- Quentin Wolak
+https://stackoverflow.com/questions/52038651/loss-does-not-decrease-during-training-word2vec-gensim
+"""
 from gensim.models.callbacks import CallbackAny2Vec
 from gensim.models import Word2Vec
 

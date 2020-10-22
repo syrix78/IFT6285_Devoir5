@@ -1,3 +1,6 @@
+"""
+Lucas Hornung --- Quentin Wolak
+"""
 import os
 
 import gensim

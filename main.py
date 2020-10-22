@@ -1,3 +1,7 @@
+"""
+Lucas Hornung --- Quentin Wolak
+"""
+
 import csv
 import multiprocessing
 import os
@@ -195,7 +199,8 @@ def get_similarity(filepath, word2vec_model):
     with open('./word_similarity.tsv', 'w+') as out_file:
         tsv_writer = csv.writer(out_file, delimiter='\t')
         for row in read_tsv:
-            word = row[0]
+            word_no_lower = row[0]
+            word = row[0].lower()
 
             # Used to handle out of vocabulary errors
             try:
@@ -204,7 +209,7 @@ def get_similarity(filepath, word2vec_model):
             except:
                 most_similar = []
 
-            most_similar.insert(0, word)
+            most_similar.insert(0, word_no_lower)
             tsv_writer.writerow(most_similar)
 
     return
